@@ -18,7 +18,12 @@ class AnimalController {
             $cSQL = $pdo->prepare('SELECT cd_animal, nm_animal, cd_especie FROM animal');
             $cSQL->execute();
 
-            $dados = $cSQL->fetch(PDO::FETCH_ASSOC);
+
+            $teste = 'teste git lens';
+            while ($dados = $cSQL->fetch(PDO::FETCH_ASSOC)) {
+                
+            }
+
 
         } catch (PDOException $e) {
             echo 'Erro: ' . $e->getMessage();
